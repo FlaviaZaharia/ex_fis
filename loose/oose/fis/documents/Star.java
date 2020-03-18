@@ -2,8 +2,8 @@ package loose.oose.fis.documents;
 
 import java.util.Arrays;
 
-public class XML extends Document {
-    public XML(String[] continut) {
+public class Star extends Document {
+    public Star(String[] continut) {
         super(continut);
     }
 
@@ -13,7 +13,7 @@ public class XML extends Document {
         int      pos = 0;
 
         for (String cuvant : continut) {
-            if (cuvant.charAt(0) != '<' || cuvant.charAt(cuvant.length() - 1) != '>') {
+            if (cuvant.charAt(0) != '*' || cuvant.charAt(cuvant.length() - 1) != '*') {
                 res[pos] = cuvant;
                 pos++;
             }
@@ -24,6 +24,6 @@ public class XML extends Document {
 
     @Override
     public String toString() {
-        return "XML file " + super.toString();
+        return "Star " + super.toString();
     }
 }
